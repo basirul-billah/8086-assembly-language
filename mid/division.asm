@@ -15,8 +15,11 @@ add bl,cl   ;a+b
 
 mov ah,01
 int 21h
-sub al,48   ;c
+sub al,48   ;c     
+mov cl,al   ;cl = c
+
+mov al,bl   ;al = a+b
 
 mov ah,00
-div bl      ;c/a+b
-mov dl,al
+div cl      ;(a+b)/c
+mov dl,al 
